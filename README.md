@@ -1,6 +1,6 @@
-# Curvenote Preview Theme
+# Curvenote Theme
 
-A proxy friendly theme server for local previews of Curvenote articles based on a React SPA
+A proxy-friendly theme server for working on Curvenote articles locally, built as a React SPA
 
 ## Installation
 

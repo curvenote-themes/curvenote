@@ -4,7 +4,7 @@ import { createProxyMiddleware } from "http-proxy-middleware";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-const version = "0.2.3";
+const version = "0.2.4";
 const __dirname$1 = path.dirname(fileURLToPath(import.meta.url));
 const isProduction = process.env.NODE_ENV === "production";
 const port = process.env.PORT || 3050;
@@ -63,7 +63,7 @@ function createServer() {
   }
   app.get("_hello", (req, res) => {
     res.json({
-      name: "Curvenote Preview Express Server",
+      name: "Curvenote Theme Server",
       version
     });
   });
@@ -197,7 +197,7 @@ function createServer() {
   });
   server.listen(port, () => {
     const baseUrl = `localhost:${port}${basePath}`;
-    console.log("Curvenote Preview Server is running...");
+    console.log("Curvenote Theme Server is running...");
     console.log(`  API/proxy server: http://${baseUrl}`);
     if (!isProduction) {
       console.log(`  → Use http://localhost:3000 for the app (Vite dev server proxies here)`);
