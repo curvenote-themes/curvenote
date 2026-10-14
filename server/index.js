@@ -35,6 +35,15 @@ function cliSessionCookie(port2, runId) {
 }
 const CLI_DOCS_URL = "https://curvenote.com/docs/cli";
 const REFUSAL_MESSAGE = "The Curvenote theme runs with the Curvenote CLI. Start your project with `curvenote start`.";
+const BRAND = `    <div class="brand">
+      <svg viewBox="0 0 400 400" aria-hidden="true">
+        <path d="M389.8,304.2c0,47.2-38.2,85.5-85.5,85.6c-47.2,0-85.5-38.2-85.6-85.5c0-47.2,38.2-85.5,85.5-85.6c0,0,0,0,0,0C351.5,218.7,389.8,257,389.8,304.2z"/>
+        <path d="M10.2,218.8h171v171C86.7,389.8,10.2,313.2,10.2,218.8z"/>
+        <path d="M60.3,60.3c32-32.1,75.6-50.2,120.9-50.1v171.1h-171C10.1,135.8,28.1,92.3,60.3,60.3z"/>
+        <path d="M339.7,131.1c-32,32.1-75.6,50.2-120.9,50.1V10.2h171C389.9,55.5,371.8,99,339.7,131.1z"/>
+      </svg>
+      <span>Curvenote</span>
+    </div>`;
 function page(title, body) {
   return `<!doctype html>
 <html lang="en">
@@ -49,6 +58,8 @@ function page(title, body) {
     }
     body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, -apple-system, 'Segoe UI', sans-serif; }
     main { max-width: 34rem; padding: 2rem 1rem; }
+    .brand { display: flex; align-items: center; gap: 0.625rem; margin: 0 0 2rem; font-size: 1.25rem; font-weight: 600; }
+    .brand svg { width: 1.75rem; height: 1.75rem; fill: currentColor; }
     h1 { font-size: 1.5rem; margin: 0 0 0.75rem; }
     p { color: var(--muted); margin: 0 0 1rem; }
     code { display: block; padding: 0.625rem 0.875rem; border-radius: 0.375rem; background: var(--code); color: var(--fg); font: 0.9rem ui-monospace, SFMono-Regular, Menlo, monospace; margin: 0 0 1rem; }
@@ -58,6 +69,7 @@ function page(title, body) {
 </head>
 <body>
   <main>
+${BRAND}
 ${body}
   </main>
 </body>
