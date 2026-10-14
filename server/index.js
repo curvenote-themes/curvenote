@@ -8,6 +8,8 @@ import { randomUUID } from "node:crypto";
 function startedByCurvenoteCli(env = process.env) {
   return env.MYSTMD_BINARY_NAME === "curvenote";
 }
+const CLI_LINK_VERSION = "0.18.0";
+const UPDATE_CLI_MESSAGE = `This Curvenote CLI is older than v${CLI_LINK_VERSION}. Update it with \`npm install -g curvenote@latest\`.`;
 function decodeThemeParams(value) {
   if (!value || value.length > 2048 || !/^[A-Za-z0-9_-]+$/.test(value)) return void 0;
   try {
@@ -71,14 +73,15 @@ const REFUSAL_PAGE = page(
 const OPEN_LINK_PAGE = page(
   "Open the link from curvenote start",
   `    <h1>Open the link from <code style="display:inline">curvenote start</code></h1>
-    <p>Open this preview with the link <code>curvenote start</code> printed in your terminal when it started, which ends in <code>?params=…</code>. Each run prints a new link, so a link or tab from an earlier run won’t open it.</p>
-    <p>If the link has no <code>?params=</code>, <a href="${CLI_DOCS_URL}" target="_blank" rel="noreferrer">update the Curvenote CLI</a>.</p>`
+    <p>Open this preview with the link <code>curvenote start</code> printed in your terminal when it started, which ends in <code>?params=…</code>. Each run prints a new link, so a link or tab from an earlier run won’t open it.</p>`
 );
 const __dirname$1 = path.dirname(fileURLToPath(import.meta.url));
 const isProduction = process.env.NODE_ENV === "production";
 const refuseToServe = isProduction && !startedByCurvenoteCli();
 const port = process.env.PORT || 3050;
 const cliSession = cliSessionCookie(port, randomUUID());
+let cliSentPacket = false;
+let warnedOutdatedCli = false;
 const contentCdnPort = process.env.CONTENT_CDN_PORT || 3100;
 const contentCdnHost = process.env.CONTENT_CDN_HOST || "localhost";
 const contentCdnUrl = `${contentCdnHost}:${contentCdnPort}`;
@@ -197,7 +200,7 @@ function createServer() {
     if (req.path.startsWith("/assets/")) {
       return next();
     }
-    let cliParams;
+    let cliInfo;
     if (isProduction) {
       const url = new URL(req.originalUrl, "http://localhost");
       const packet = url.searchParams.get("params");
@@ -206,6 +209,7 @@ function createServer() {
           res.status(403).type("html").send(OPEN_LINK_PAGE);
           return;
         }
+        cliSentPacket = true;
         url.searchParams.delete("params");
         res.setHeader(
           "Set-Cookie",
@@ -214,10 +218,17 @@ function createServer() {
         res.redirect(302, `${url.pathname}${url.search}`);
         return;
       }
-      cliParams = cliSession.read(req.headers.cookie);
-      if (!cliParams) {
+      cliInfo = cliSession.read(req.headers.cookie);
+      if (!cliInfo && cliSentPacket) {
         res.status(403).type("html").send(OPEN_LINK_PAGE);
         return;
+      }
+      if (!cliInfo) {
+        if (!warnedOutdatedCli) console.warn(`
+⚠️  ${UPDATE_CLI_MESSAGE}
+`);
+        warnedOutdatedCli = true;
+        cliInfo = { outdated: true, requires: CLI_LINK_VERSION };
       }
     }
     console.log("Serving index.html for route:", req.url.replace(/^https?:\/\/[^/]+/, ""));
@@ -237,7 +248,7 @@ function createServer() {
           ""
         );
       }
-      const cliInjection = cliParams ? `<script>window.__CURVENOTE_CLI__ = ${JSON.stringify(cliParams).replace(/</g, "\\u003c")};<\/script>` : "";
+      const cliInjection = cliInfo ? `<script>window.__CURVENOTE_CLI__ = ${JSON.stringify(cliInfo).replace(/</g, "\\u003c")};<\/script>` : "";
       const headInjection = `
     <script>window.__BASE_PATH__ = "${basePath}";<\/script>${cliInjection}
     <script src="${basePath}/thebe-core.min.js" onload="window.setupThebeCore?.()"><\/script>
