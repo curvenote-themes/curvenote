@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-7 -31 294 68" width="294" height="68" role="img" aria-label="Curvenote progress loop">
+<title>Curvenote progress loop</title>
+<style>
+g,circle,rect,polygon,path{transform-origin:0 0}.s{stroke-width:2;stroke-linejoin:round;fill-opacity:0;stroke:#C9C4CC}
+@keyframes c0{0%{fill-opacity:0;stroke:#C9C4CC;}5.556%{fill-opacity:0;stroke:#C9C4CC;animation-timing-function:ease-out;}12.5%{fill-opacity:1;stroke:#0A84FF;}90.278%{fill-opacity:1;stroke:#0A84FF;animation-timing-function:ease-in;}95.833%{fill-opacity:0;stroke:#C9C4CC;}100%{fill-opacity:0;stroke:#C9C4CC;}}
+@keyframes p0{0%{transform:scale(1);}5.556%{transform:scale(1);animation-timing-function:ease-out;}11.111%{transform:scale(1.45);animation-timing-function:ease-in-out;}18.056%{transform:scale(1);}100%{transform:scale(1);}}
+@keyframes h0{0%{transform:translateY(0);}55.556%{transform:translateY(0);animation-timing-function:ease-out;}61.667%{transform:translateY(-28px) rotate(-8deg);animation-timing-function:ease-in;}66.667%{transform:translateY(2px) scale(1.18,.82);animation-timing-function:ease-out;}70.833%{transform:translateY(0);}100%{transform:translateY(0);}}
+.c0{fill:#0A84FF;animation:c0 3.6s linear infinite}.p0{animation:p0 3.6s linear infinite}.h0{animation:h0 3.6s linear infinite}
+@keyframes c1{0%{fill-opacity:0;stroke:#C9C4CC;}13.889%{fill-opacity:0;stroke:#C9C4CC;animation-timing-function:ease-out;}20.833%{fill-opacity:1;stroke:#FFC800;}90.278%{fill-opacity:1;stroke:#FFC800;animation-timing-function:ease-in;}95.833%{fill-opacity:0;stroke:#C9C4CC;}100%{fill-opacity:0;stroke:#C9C4CC;}}
+@keyframes p1{0%{transform:scale(1);}13.889%{transform:scale(1);animation-timing-function:ease-out;}19.444%{transform:scale(1.45);animation-timing-function:ease-in-out;}26.389%{transform:scale(1);}100%{transform:scale(1);}}
+@keyframes h1{0%{transform:translateY(0);}58.056%{transform:translateY(0);animation-timing-function:ease-out;}64.167%{transform:translateY(-28px) rotate(-8deg);animation-timing-function:ease-in;}69.167%{transform:translateY(2px) scale(1.18,.82);animation-timing-function:ease-out;}73.333%{transform:translateY(0);}100%{transform:translateY(0);}}
+.c1{fill:#FFC800;animation:c1 3.6s linear infinite}.p1{animation:p1 3.6s linear infinite}.h1{animation:h1 3.6s linear infinite}
+@keyframes c2{0%{fill-opacity:0;stroke:#C9C4CC;}22.222%{fill-opacity:0;stroke:#C9C4CC;animation-timing-function:ease-out;}29.167%{fill-opacity:1;stroke:#FF3366;}90.278%{fill-opacity:1;stroke:#FF3366;animation-timing-function:ease-in;}95.833%{fill-opacity:0;stroke:#C9C4CC;}100%{fill-opacity:0;stroke:#C9C4CC;}}
+@keyframes p2{0%{transform:scale(1);}22.222%{transform:scale(1);animation-timing-function:ease-out;}27.778%{transform:scale(1.45);animation-timing-function:ease-in-out;}34.722%{transform:scale(1);}100%{transform:scale(1);}}
+@keyframes h2{0%{transform:translateY(0);}60.556%{transform:translateY(0);animation-timing-function:ease-out;}66.667%{transform:translateY(-28px) rotate(-8deg);animation-timing-function:ease-in;}71.667%{transform:translateY(2px) scale(1.18,.82);animation-timing-function:ease-out;}75.833%{transform:translateY(0);}100%{transform:translateY(0);}}
+.c2{fill:#FF3366;animation:c2 3.6s linear infinite}.p2{animation:p2 3.6s linear infinite}.h2{animation:h2 3.6s linear infinite}
+@keyframes c3{0%{fill-opacity:0;stroke:#C9C4CC;}30.556%{fill-opacity:0;stroke:#C9C4CC;animation-timing-function:ease-out;}37.5%{fill-opacity:1;stroke:#6E33FF;}90.278%{fill-opacity:1;stroke:#6E33FF;animation-timing-function:ease-in;}95.833%{fill-opacity:0;stroke:#C9C4CC;}100%{fill-opacity:0;stroke:#C9C4CC;}}
+@keyframes p3{0%{transform:scale(1);}30.556%{transform:scale(1);animation-timing-function:ease-out;}36.111%{transform:scale(1.45);animation-timing-function:ease-in-out;}43.056%{transform:scale(1);}100%{transform:scale(1);}}
+@keyframes h3{0%{transform:translateY(0);}63.056%{transform:translateY(0);animation-timing-function:ease-out;}69.167%{transform:translateY(-28px) rotate(-8deg);animation-timing-function:ease-in;}74.167%{transform:translateY(2px) scale(1.18,.82);animation-timing-function:ease-out;}78.333%{transform:translateY(0);}100%{transform:translateY(0);}}
+.c3{fill:#6E33FF;animation:c3 3.6s linear infinite}.p3{animation:p3 3.6s linear infinite}.h3{animation:h3 3.6s linear infinite}
+@keyframes c4{0%{fill-opacity:0;stroke:#C9C4CC;}38.889%{fill-opacity:0;stroke:#C9C4CC;animation-timing-function:ease-out;}45.833%{fill-opacity:1;stroke:#0A84FF;}90.278%{fill-opacity:1;stroke:#0A84FF;animation-timing-function:ease-in;}95.833%{fill-opacity:0;stroke:#C9C4CC;}100%{fill-opacity:0;stroke:#C9C4CC;}}
+@keyframes p4{0%{transform:scale(1);}38.889%{transform:scale(1);animation-timing-function:ease-out;}44.444%{transform:scale(1.45);animation-timing-function:ease-in-out;}51.389%{transform:scale(1);}100%{transform:scale(1);}}
+@keyframes h4{0%{transform:translateY(0);}65.556%{transform:translateY(0);animation-timing-function:ease-out;}71.667%{transform:translateY(-28px) rotate(-8deg);animation-timing-function:ease-in;}76.667%{transform:translateY(2px) scale(1.18,.82);animation-timing-function:ease-out;}80.833%{transform:translateY(0);}100%{transform:translateY(0);}}
+.c4{fill:#0A84FF;animation:c4 3.6s linear infinite}.p4{animation:p4 3.6s linear infinite}.h4{animation:h4 3.6s linear infinite}
+@keyframes c5{0%{fill-opacity:0;stroke:#C9C4CC;}47.222%{fill-opacity:0;stroke:#C9C4CC;animation-timing-function:ease-out;}54.167%{fill-opacity:1;stroke:#FF3366;}90.278%{fill-opacity:1;stroke:#FF3366;animation-timing-function:ease-in;}95.833%{fill-opacity:0;stroke:#C9C4CC;}100%{fill-opacity:0;stroke:#C9C4CC;}}
+@keyframes p5{0%{transform:scale(1);}47.222%{transform:scale(1);animation-timing-function:ease-out;}52.778%{transform:scale(1.45);animation-timing-function:ease-in-out;}59.722%{transform:scale(1);}100%{transform:scale(1);}}
+@keyframes h5{0%{transform:translateY(0);}68.056%{transform:translateY(0);animation-timing-function:ease-out;}74.167%{transform:translateY(-28px) rotate(-8deg);animation-timing-function:ease-in;}79.167%{transform:translateY(2px) scale(1.18,.82);animation-timing-function:ease-out;}83.333%{transform:translateY(0);}100%{transform:translateY(0);}}
+.c5{fill:#FF3366;animation:c5 3.6s linear infinite}.p5{animation:p5 3.6s linear infinite}.h5{animation:h5 3.6s linear infinite}
+@media (prefers-reduced-motion: reduce){*{animation-play-state:paused!important}}
+</style>
+<g id="content">
+<g transform="translate(15 15)"><g class="h0"><g class="p0"><circle class="s c0" r="13.125"/></g></g></g>
+<g transform="translate(65 15)"><g class="h1"><g class="p1"><polygon class="s c1" points="0,-11.875 13.125,11.875 -13.125,11.875"/></g></g></g>
+<g transform="translate(115 15)"><g class="h2"><g class="p2"><rect class="s c2" x="-13.125" y="-13.125" width="26.25" height="26.25" rx="1.875"/></g></g></g>
+<g transform="translate(165 15)"><g class="h3"><g class="p3"><rect class="s c3" x="-13.125" y="-13.125" width="26.25" height="26.25" rx="1.875"/></g></g></g>
+<g transform="translate(215 15)"><g class="h4"><g class="p4"><rect class="s c4" x="-17.5" y="-5" width="35" height="10" rx="1.25" transform="rotate(-22)"/></g></g></g>
+<g transform="translate(265 15)"><g class="h5"><g class="p5"><polygon class="s c5" points="0,-11.875 13.125,11.875 -13.125,11.875"/></g></g></g>
+</g>
+</svg>

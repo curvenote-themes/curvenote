@@ -1,14 +1,10 @@
 {
   "name": "@curvenote-theme/preview",
-  "version": "0.2.4",
+  "version": "0.3.1",
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "NODE_ENV=production node server/index.js"
-  },
-  "dependencies": {
-    "express": "^4.18.2",
-    "http-proxy-middleware": "^3.0.3"
+    "start": "node server/index.js"
   },
   "engines": {
     "node": ">=18"
