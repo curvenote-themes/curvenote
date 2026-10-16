@@ -1,7 +1,7 @@
 jtex: v1
 title: Curvenote Theme
 description: A proxy-friendly theme server for working on Curvenote articles locally, built as a React SPA
-version: 0.3.0
+version: 0.3.1
 license: Restricted. See LICENSE for details.
 source: https://github.com/curvenote/core
 authors:
